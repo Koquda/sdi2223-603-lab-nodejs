@@ -1,0 +1,17 @@
+{% extends "layout.twig" %}
+{% block title %} Autores {% endblock %}
+{% block main_container %}
+    <h2>Autores</h2>
+    <div class="row">
+        <!-- http://librosweb.es/libro/bootstrap_3/capitulo_2/tipos_de_rejillas.html -->
+        {% for author in authors %}
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                <div style="width:200px; border:1px solid black; padding:2em; border-radius:1em">
+                    <div>{{ author.name }} </div>
+                    <div class="small">{{ author.band }} </div>
+                    <div class="small">{{ author.role }} </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
