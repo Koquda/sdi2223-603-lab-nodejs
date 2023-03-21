@@ -28,17 +28,21 @@ module.exports = function(app) {
     });
 
     app.post('/authors/add', function (req, res) {
-        let response
+        let response = ""
+        let hasErrors = false
         if (req.body.name === undefined || req.body.name === "") {
-            response = "Nombre no enviado en la petición"
+            response += "Nombre no enviado en la petición" + "<br>"
         }
-        else if (req.body.band === undefined || req.body.band === "") {
-            response = "Grupo no enviado en la petición"
+        if (req.body.band === undefined || req.body.band === "") {
+            response += "Grupo no enviado en la petición" + "<br>"
+            hasErrors = true
         }
-        else if (req.body.role === undefined || req.body.role === "") {
-            response = "Rol no enviado en la petición"
+        if (req.body.role === undefined || req.body.role === "") {
+            response += "Rol no enviado en la petición" + "<br>"
+            hasErrors = true
         }
-        else {
+
+        if (!hasErrors) {
             response = "Autor agregado: " + req.body.name + "<br>"
                 + " grupo: " + req.body.band + "<br>"
                 + " rol: " + req.body.role
