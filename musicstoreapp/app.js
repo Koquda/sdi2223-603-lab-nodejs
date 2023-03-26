@@ -8,6 +8,12 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var app = express();
+let fileUpload = require('express-fileupload');
+app.use(fileUpload({
+  limits: { fileSize: 50 * 1024 * 1024 },
+  createParentPath: true
+}));
+app.set('uploadPath', __dirname)
 
 let bodyParser = require('body-parser');
 app.use(bodyParser.json());
