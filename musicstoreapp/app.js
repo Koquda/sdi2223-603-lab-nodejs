@@ -40,6 +40,14 @@ const { MongoClient } = require("mongodb");
 const url = 'mongodb+srv://admin:campina@musicstoreapp.fakbn46.mongodb.net/?retryWrites=true&w=majority';
 app.set('connectionStrings',url)
 
+// SessionRouter
+const userSessionRouter = require('./routes/userSessionRouter');
+const userAudiosRouter = require('./routes/userAudiosRouter');
+app.use("/songs/add",userSessionRouter);
+app.use("/publications",userSessionRouter);
+app.use("/audios/",userAudiosRouter);
+app.use("/shop/",userSessionRouter)
+
 // Repositories
 let songsRepository = require("./repositories/songsRepository.js");
 songsRepository.init(app, MongoClient);
