@@ -5,6 +5,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-fileupload": "^1.4.0",
+    "express-session": "^1.17.3",
     "mongodb": "^4.1.4"
   }
 }
