@@ -51,7 +51,10 @@ app.use("/shop/",userSessionRouter)
 // Repositories
 let songsRepository = require("./repositories/songsRepository.js");
 songsRepository.init(app, MongoClient);
-require("./routes/songs.js")(app, songsRepository)
+let commentsRepository = require("./repositories/commentsRepository.js");
+commentsRepository.init(app, MongoClient);
+require("./routes/songs.js")(app, songsRepository, commentsRepository)
+require("./routes/comments.js")(app, commentsRepository)
 
 const usersRepository = require("./repositories/usersRepository.js");
 usersRepository.init(app, MongoClient);
