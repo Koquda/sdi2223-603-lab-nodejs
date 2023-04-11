@@ -120,7 +120,19 @@ module.exports = function(app, songsRepository, commentsRepository) {
         let options = {};
         songsRepository.findSong(filter, options).then(song => {
             commentsRepository.getComments({song_id: song._id}, {}).then( commentList => {
-                res.render("songs/song.twig", {song: song, commentList: commentList});
+                let newFilter = {
+                    user: req.session.user,
+                    songId: song._id
+                }
+                songsRepository.getPurchases(newFilter, options).then( songPurchased => {
+                    let available = true;
+                    if (req.session.user === song.author)
+                        available = false;
+                    if (songPurchased.length > 0) {
+                        available = false;
+                    }
+                    res.render("songs/song.twig", {song: song, commentList: commentList, available: available});
+                })
             }).catch(error => {
                 res.send("Se ha producido un error al buscar los comentarios: " + error)
             })
@@ -168,12 +180,24 @@ module.exports = function(app, songsRepository, commentsRepository) {
             user: req.session.user,
             songId: songId
         }
-        songsRepository.buySong(shop, function (shopId) {
-            if (shopId == null) {
-                res.send("Error al realizar la compra");
-            } else {
-                res.redirect("/purchases");
-            }
+
+
+            songsRepository.findSong({_id: songId}, {}).then(song => {
+                songsRepository.getPurchases(shop, {}).then(songPurchased => {
+                    if (req.session.user === song.author)
+                        res.send("Error al realizar la compra, no puede comprar su propia canción");
+                    else if (songPurchased.length > 0) {
+                        res.send("Error al realizar la compra, ya ha comprado la canción");
+                    } else {
+                        songsRepository.buySong(shop, function (shopId) {
+                            if (shopId == null) {
+                                res.send("Error al realizar la compra");
+                            } else {
+                                res.redirect("/purchases");
+                            }
+                        })
+                    }
+            })
         })
     });
 

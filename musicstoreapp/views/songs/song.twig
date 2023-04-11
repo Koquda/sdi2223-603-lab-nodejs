@@ -12,9 +12,15 @@
 			 <h2>{{song.title}}</h2>
 			 <p>{{song.author}}</p>
 			 <p>{{song.kind}}</p>
-			  <a class="btn btn-primary pull-right"
+			  {% if available %}
+			  	<a class="btn btn-primary pull-right"
 				 href="/songs/buy/{{ song._id }}">{{ song.price }} €</a>
-			 <!-- Cambiar el precio por "reproducir" si ya está comprada -->
+			  {% else %}
+			 	<!-- Cambiar el precio por "reproducir" si ya está comprada -->
+				  <audio controls>
+					  <source src="/audios/{{ song._id }}.mp3" type="audio/mpeg">
+				  </audio>
+			  {% endif %}
 		  </div>
 		</div>
 	  </div>
