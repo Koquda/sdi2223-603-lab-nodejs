@@ -62,6 +62,8 @@ commentsRepository.init(app, MongoClient);
 require("./routes/songs.js")(app, songsRepository, commentsRepository)
 require("./routes/comments.js")(app, commentsRepository)
 
+require("./routes/api/songsAPIv1.0.js")(app, songsRepository);
+
 const usersRepository = require("./repositories/usersRepository.js");
 usersRepository.init(app, MongoClient);
 require("./routes/users.js")(app, usersRepository);
