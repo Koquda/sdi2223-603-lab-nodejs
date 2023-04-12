@@ -1,13 +1,10 @@
 {
-  "name": "tienda_musica",
-  "description": "Tienda de música",
-  "version": "1.0.0",
+  "name": "memoryapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {},
   "dependencies": {
-    "express": "^4.17.1",
-    "express-fileupload": "^1.4.0",
-    "express-session": "^1.17.3",
-    "jsonwebtoken": "^9.0.0",
-    "mongodb": "^4.1.4",
-    "request": "^2.88.2"
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3"
   }
 }
