@@ -14,7 +14,7 @@
 			 <p>{{song.kind}}</p>
 			  {% if available %}
 			  	<a class="btn btn-primary pull-right"
-				 href="/songs/buy/{{ song._id }}">{{ song.price }} €</a>
+				 href="/songs/buy/{{ song._id }}">{{ song.price }} € - {{ song.usd }} $</a>
 			  {% else %}
 			 	<!-- Cambiar el precio por "reproducir" si ya está comprada -->
 				  <audio controls>
