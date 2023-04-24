@@ -238,11 +238,6 @@ module.exports = function(app, songsRepository, commentsRepository) {
         });
     })
 
-
-
-
-
-
     function step1UpdateCover(files, songId, callback) {
         if (files && files.cover != null) {
             let image = files.cover;
