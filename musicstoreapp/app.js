@@ -52,8 +52,7 @@ require("./routes/authors.js")(app);
 
 // MongoBD
 const { MongoClient } = require("mongodb");
-// const url = 'mongodb+srv://admin:campina@musicstoreapp.fakbn46.mongodb.net/?retryWrites=true&w=majority';
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://admin:campina@musicstoreapp.fakbn46.mongodb.net/?retryWrites=true&w=majority';
 app.set('connectionStrings',url)
 
 // SessionRouter

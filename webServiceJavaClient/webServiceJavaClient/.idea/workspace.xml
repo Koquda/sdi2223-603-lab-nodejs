@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="00eeabfd-19dd-48ba-9d05-07ba39f786f3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webServiceJavaClient.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/FastInfoset-1.2.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/activation-1.1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-codec-1.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-io-2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-logging-1.1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpclient-4.3.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/httpcore-4.3.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/istack-commons-runtime-2.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-core-asl-1.9.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-jaxrs-1.9.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-mapper-asl-1.9.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jackson-xc-1.9.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-api-2.2.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-core-2.2.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jaxb-impl-2.2.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-annotations-api_1.2_spec-1.0.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-jaxrs-api_2.0_spec-1.0.0.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jboss-logging-3.1.4.GA.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jcip-annotations-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/jsr173_api-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/resteasy-client-3.0.16.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/resteasy-jackson-provider-3.0.16.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/resteasy-jaxb-provider-3.0.16.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/resteasy-jaxrs-3.0.16.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/uniovi/sdi/UpdateMemoryThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/uniovi/sdi/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
@@ -45,11 +59,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\UO282874\OneDrive - Universidad de Oviedo\3º\SDI\Lab\sdi2223-603-lab-nodejs\webServiceJavaClient\webServiceJavaClient" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.uniovi.sdi.Window" />
@@ -78,7 +87,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681316178964</updated>
-      <workItem from="1681316179994" duration="330000" />
+      <workItem from="1681316179994" duration="297000" />
     </task>
     <servers />
   </component>
